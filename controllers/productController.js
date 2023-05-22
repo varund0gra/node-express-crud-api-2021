@@ -23,10 +23,10 @@ const product_details = async (req, res) => {
 // Add New product
 const product_create = async (req, res) => {
     const product = new Product({
-        title: req.body.title,
-        price: req.body.price,
-        image: req.body.image,
-        details: req.body.details
+        E_mail: req.body.E_mail,
+        E_password: req.body.E_password,
+        E_stats: req.body.E_stats
+        
       });
     
       try {
@@ -41,10 +41,9 @@ const product_create = async (req, res) => {
 const product_update = async (req, res) => {
     try {
         const product = {
-          title: req.body.title,
-          price: req.body.price,
-          image: req.body.image,
-          details: req.body.details
+          E_mail: req.body.E_mail,
+          E_password: req.body.E_password,
+          E_stats: req.body.E_stats
         };
     
         const updatedProduct = await Product.findByIdAndUpdate(
